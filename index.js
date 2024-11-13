@@ -33,6 +33,6 @@ app.use((err, req, res, next) => {
 });
 
 // Start the server
-app.listen(process.env.PORT || 5020, () => {
-  console.log(`Server started at ${process.env.PORT || 5020}`);
+app.listen(process.env.PORT || 3001, () => {
+  console.log(`Server started at ${process.env.PORT || 3001}`);
 });

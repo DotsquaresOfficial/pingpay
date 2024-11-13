@@ -1,4 +1,5 @@
 const JWT = require('jsonwebtoken');
+const { unauthorizedError } = require('./errors');
 
 module.exports={
     signAccessToken:(userId)=>{
@@ -26,7 +27,7 @@ module.exports={
         const authToken=req.headers['authorization'].split(' ')[1];
         JWT.verify(authToken,process.env.ACCESS_TOKEN_SECRET,(error,payload)=>{
             if(error){
-                next(Error('Unauthorized'));
+                return unauthorizedError(res);
             }
             req.payload=payload;
             next();

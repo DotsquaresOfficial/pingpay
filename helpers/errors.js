@@ -22,6 +22,14 @@ const fieldIsInvalidError=(res,field,suggestion)=>{
     });
 }
 
+const unauthorizedError=(res)=>{
+    return res.status(400).send({
+         success:false,
+         message:`Your request does is unauthorized.`,
+         reason:`unauthorized Request`
+     });
+ }
+
 const feildAlreadyExistsError=(res,field)=>{
     return res.status(400).send({
          success:false,
@@ -30,4 +38,4 @@ const feildAlreadyExistsError=(res,field)=>{
      });
  }
 
-module.exports={fieldDoesNotExistsError,fieldIsInvalidError,feildAlreadyExistsError,userDoesNotExistsError};
+module.exports={fieldDoesNotExistsError,fieldIsInvalidError,feildAlreadyExistsError,userDoesNotExistsError,unauthorizedError};
