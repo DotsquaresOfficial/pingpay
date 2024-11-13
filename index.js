@@ -4,16 +4,21 @@ const { authRouter } = require('./router/auth_router');
 const app = express();
 const dotEnv = require('dotenv').config();
 const morgan = require('morgan');
+const cors=require('cors');
 
 // Database connection
 const connectDB = require('./helpers/init_mongodb.js');
 connectDB();
+
+// using cors to access from anywhere
+app.use(cors());
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Logs all request and response
 app.use(morgan('combined'));
+
 
 // parse application/json
 app.use(bodyParser.json());
