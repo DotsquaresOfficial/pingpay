@@ -21,5 +21,5 @@ app.use(bodyParser.json())
 app.use('/api/v1', authRouter)
 
 app.listen(process.env.PORT||5020, () => {
-    console.log("server started");
+    console.log("server started ");
 });
