@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { authRouter } = require('./router/auth_router');
+const { pingLinkRouter } = require('./router/ping_links_router.js');
+const { uploadFileRouter } = require('./router/file_uploader_router.js');
+
 const app = express();
 const dotEnv = require('dotenv').config();
 const morgan = require('morgan');
@@ -25,6 +28,8 @@ app.use(bodyParser.json());
 
 // Use your auth routes
 app.use('/api/v1', authRouter);
+app.use('/api/v1',pingLinkRouter);
+app.use('/api/v1',uploadFileRouter);
 
 // Handle 404 errors (undefined routes)
 app.use((req, res, next) => {
