@@ -9,6 +9,10 @@ const dotEnv = require('dotenv').config();
 const morgan = require('morgan');
 const cors=require('cors');
 
+
+app.use(express.static(__dirname + '/public'));
+app.use('/uploads', express.static('uploads'));
+
 // Database connection
 const connectDB = require('./helpers/init_mongodb.js');
 connectDB();

@@ -4,7 +4,7 @@ const { verifyAccessToken } = require('../helpers/jwt_helper');
 const pingLinkRouter = require("express").Router();
 
 pingLinkRouter.post("/createPingLink",verifyAccessToken, createPingLink);
-pingLinkRouter.post("/updatePingLink",verifyAccessToken, updatePinglink);
+pingLinkRouter.post("/updatePingLink/:id",verifyAccessToken, updatePinglink);
 pingLinkRouter.get("/getPingLink",verifyAccessToken, getPingLink);
 pingLinkRouter.get("/getPingLink/:id",verifyAccessToken, getPingLinkById);
 
