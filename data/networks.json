@@ -1,0 +1,80 @@
+[
+    {
+        "name": "Ethereum Mainnet",
+        "chainId": 1,
+        "nativeCurrency": {
+            "name": "Ether",
+            "symbol": "ETH",
+            "decimals": 18
+        },
+        "rpcUrl": "https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID",
+        "blockExplorerUrl": "https://etherscan.io",
+        "active": true,
+        "iconUrl": "https://cryptologos.cc/logos/ethereum-eth-logo.png"
+    },
+    {
+        "name": "Binance Smart Chain",
+        "chainId": 56,
+        "nativeCurrency": {
+            "name": "Binance Coin",
+            "symbol": "BNB",
+            "decimals": 18
+        },
+        "rpcUrl": "https://bsc-dataseed.binance.org",
+        "blockExplorerUrl": "https://bscscan.com",
+        "active": true,
+        "iconUrl": "https://cryptologos.cc/logos/binance-coin-bnb-logo.png"
+    },
+    {
+        "name": "Polygon Mainnet",
+        "chainId": 137,
+        "nativeCurrency": {
+            "name": "MATIC",
+            "symbol": "MATIC",
+            "decimals": 18
+        },
+        "rpcUrl": "https://rpc-mainnet.maticvigil.com",
+        "blockExplorerUrl": "https://polygonscan.com",
+        "active": true,
+        "iconUrl": "https://cryptologos.cc/logos/polygon-matic-logo.png"
+    },
+    {
+        "name": "Avalanche C-Chain",
+        "chainId": 43114,
+        "nativeCurrency": {
+            "name": "Avalanche",
+            "symbol": "AVAX",
+            "decimals": 18
+        },
+        "rpcUrl": "https://api.avax.network/ext/bc/C/rpc",
+        "blockExplorerUrl": "https://snowtrace.io",
+        "active": true,
+        "iconUrl": "https://cryptologos.cc/logos/avalanche-avax-logo.png"
+    },
+    {
+        "name": "Solana Mainnet",
+        "chainId": 101,
+        "nativeCurrency": {
+            "name": "Solana",
+            "symbol": "SOL",
+            "decimals": 9
+        },
+        "rpcUrl": "https://api.mainnet-beta.solana.com",
+        "blockExplorerUrl": "https://explorer.solana.com",
+        "active": true,
+        "iconUrl": "https://cryptologos.cc/logos/solana-sol-logo.png"
+    },
+    {
+        "name": "Fantom Opera",
+        "chainId": 250,
+        "nativeCurrency": {
+            "name": "Fantom",
+            "symbol": "FTM",
+            "decimals": 18
+        },
+        "rpcUrl": "https://rpcapi.fantom.network",
+        "blockExplorerUrl": "https://ftmscan.com",
+        "active": true,
+        "iconUrl": "https://cryptologos.cc/logos/fantom-ftm-logo.png"
+    }
+]

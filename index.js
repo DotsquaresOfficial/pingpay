@@ -1,13 +1,22 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { authRouter } = require('./router/auth_router');
+const { pingLinkRouter } = require('./router/ping_links_router.js');
+const { uploadFileRouter } = require('./router/file_uploader_router.js');
+
 const app = express();
 const dotEnv = require('dotenv').config();
 const morgan = require('morgan');
 const cors=require('cors');
 
+
+app.use(express.static(__dirname + '/public'));
+app.use('/uploads', express.static('uploads'));
+
 // Database connection
 const connectDB = require('./helpers/init_mongodb.js');
+const { networkRouter } = require('./router/network_router.js');
+const cryptoRouter = require('./router/crypto_router.js');
 connectDB();
 
 // using cors to access from anywhere
@@ -25,6 +34,10 @@ app.use(bodyParser.json());
 
 // Use your auth routes
 app.use('/api/v1', authRouter);
+app.use('/api/v1',pingLinkRouter);
+app.use('/api/v1',uploadFileRouter);
+app.use('/api/v1',networkRouter);
+app.use('/api/v1',cryptoRouter);
 
 // Handle 404 errors (undefined routes)
 app.use((req, res, next) => {
